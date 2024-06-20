@@ -48,7 +48,7 @@ p {
   white-space: nowrap;
 }
 
-.contact-info > h3, .contact-info > p {
+.contact-info > p {
   max-width: calc(100vw - 30vw);
   overflow: hidden;
   white-space: nowrap;
