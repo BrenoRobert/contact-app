@@ -10,10 +10,6 @@ p {
   margin: 0 !important;
 }
 
-.main {
-  width: 100%;
-}
-
 .profile-photo {
   width: 50px;
   height: 50px;
@@ -30,12 +26,15 @@ p {
   width: 0;
   display: none;
   transition: all 0.35s;
+  transform: translateX(100%);
 }
 
 #contact.show {
   width: 30%;
+  min-width: 400px;
   display: flex;
   transition: all 0.35s;
+  transform: none;
 }
 
 .contact-info {
@@ -46,6 +45,12 @@ p {
   max-width: calc(100vw - 30vw);
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.contact-info > h3, .contact-info > p {
+  max-width: calc(100vw - 30vw);
+  overflow: hidden;
   white-space: nowrap;
 }
 
@@ -100,8 +105,10 @@ p {
 
 @media (max-width: 768px) {
   #contact.show {
-    position: fixed;
+    position: absolute;
     width: 100%;
     right: 0;
+    min-width: auto;
+    min-height: 100vh;
   }
 }
