@@ -67,6 +67,7 @@ function getContactDetails(obj) {
 
   if ($('#contact').hasClass('hide')) {
     $('#contact').slideToggle().removeClass('hide').addClass('show');
+    $('#contacts-list').addClass('col-lg');
   }
 }
 
@@ -74,5 +75,6 @@ function removeChecked() {
   $('#settings').prop('checked', false);
   if ($('#contact').hasClass('show')) {
     $('#contact').slideToggle().removeClass('show').addClass('hide');
+    setTimeout(() => $('#contacts-list').removeClass('col-lg'), 350);
   }
 }
