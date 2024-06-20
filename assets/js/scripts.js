@@ -67,7 +67,7 @@ function getContactDetails(obj) {
 
   if ($('#contact').hasClass('hide')) {
     $('#contact').slideToggle().removeClass('hide').addClass('show');
-    $('#contacts-list').addClass('col-lg');
+    $('#contacts-list').addClass('col-md');
   }
 }
 
@@ -75,6 +75,6 @@ function removeChecked() {
   $('#settings').prop('checked', false);
   if ($('#contact').hasClass('show')) {
     $('#contact').slideToggle().removeClass('show').addClass('hide');
-    setTimeout(() => $('#contacts-list').removeClass('col-lg'), 350);
+    setTimeout(() => $('#contacts-list').removeClass('col-md'), 350);
   }
 }
